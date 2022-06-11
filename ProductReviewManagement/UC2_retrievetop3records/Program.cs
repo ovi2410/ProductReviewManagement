@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC1_AddingDetailsInList;
+using UC2_retrievetop3records;
 
 namespace ProductReviewManagement
 {
@@ -22,6 +22,9 @@ namespace ProductReviewManagement
             {
                 case 1:
                     ProductReviewManager.AddingProductReview(productReviews);
+                    break;
+                case 2:
+                    ProductReviewManager.RetrieveTopThreeRating(productReviews);
                     break;
             }
         }

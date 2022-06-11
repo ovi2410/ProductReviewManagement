@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC1_AddingDetailsInList
+namespace UC2_retrievetop3records
 {
-    //getter and setter fieldes
     public class ProductReview
     {
         public int productId { get; set; }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC1_AddingDetailsInList
+namespace UC2_retrievetop3records
 {
     public class ProductReviewManager
     {
@@ -52,6 +52,19 @@ namespace UC1_AddingDetailsInList
             {
                 Console.WriteLine("ProductId:{0}\t UserId:{1}\t Review:{2}\tRating:{3}\tIsLike:{4}\t", product.productId, product.userId, product.review, product.rating, product.isLike);
             }
+        }
+        /// <summary>
+        /// UC2--->Retrieve Top Three Records Whose Rating is High
+        /// </summary>
+        /// <param name="products"></param>
+        /// <returns></returns>
+        public static int RetrieveTopThreeRating(List<ProductReview> products)
+        {
+            AddingProductReview(products);
+            Console.WriteLine("\n-------------Retrieving Top Three Records Based On Rating--------------");
+            var res = (from product in products orderby product.rating descending select product).Take(3).ToList();
+            IterateThroughList(res);
+            return res.Count;
         }
     }
 }

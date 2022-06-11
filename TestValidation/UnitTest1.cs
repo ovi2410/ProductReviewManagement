@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using UC1_AddingDetailsInList;
+using UC2_retrievetop3records;
 
-namespace TestValidation
+namespace uc2_TestProject1
 {
     [TestClass]
     public class UnitTest1
@@ -23,6 +23,16 @@ namespace TestValidation
             int actual = ProductReviewManager.AddingProductReview(productList);
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// UC2--->Retrieve Top Three Records Whose Rating is High
+        /// </summary>
+        [TestMethod]
+        public void TestMethodForRetrieveTopThreeRecord()
+        {
+            int expected = 3;
 
+            var actual = ProductReviewManager.RetrieveTopThreeRating(productList);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
