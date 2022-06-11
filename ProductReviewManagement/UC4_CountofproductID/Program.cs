@@ -1,10 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC3_RetrieveRecordRatingandID;
+using UC4_CountofproductID;
 
 namespace ProductReviewManagement
 {
@@ -26,8 +25,9 @@ namespace ProductReviewManagement
                 case 2:
                     ProductReviewManager.RetrieveTopThreeRating(productReviews);
                     break;
-                case 3:
-                    ProductReviewManager.RetrieveRecordsBasedOnRatingAndProductId(productReviews);
+
+                case 4:
+                    ProductReviewManager.CountingProductId(productReviews);
                     break;
 
             }
