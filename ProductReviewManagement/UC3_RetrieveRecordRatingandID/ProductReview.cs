@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC2_retrievetop3records
+namespace UC3_RetrieveRecordRatingandID
 {
     public class ProductReview
     {

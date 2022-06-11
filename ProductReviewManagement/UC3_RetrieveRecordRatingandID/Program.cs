@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC2_retrievetop3records;
+using UC3_RetrieveRecordRatingandID;
 
 namespace ProductReviewManagement
 {
@@ -26,6 +26,10 @@ namespace ProductReviewManagement
                 case 2:
                     ProductReviewManager.RetrieveTopThreeRating(productReviews);
                     break;
+                case 3:
+                    ProductReviewManager.RetrieveRecordsBasedOnRatingAndProductId(productReviews);
+                    break;
+
             }
         }
     }
