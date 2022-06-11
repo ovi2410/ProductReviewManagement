@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_CountofproductID
+namespace UC5_RetriveingproductIdandReview
 {
     public class ProductReview
     {

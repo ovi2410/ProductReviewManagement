@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC4_CountofproductID
+namespace UC5_RetriveingproductIdandReview
 {
     public class ProductReviewManager
     {
@@ -67,6 +67,18 @@ namespace UC4_CountofproductID
             return res.Count;
         }
         /// <summary>
+        /// UC3-->Retrieve  records from list based on productid and rating > 3  
+        /// </summary>
+        /// <param name="products"></param>
+        /// <returns></returns>
+        public static int[] RetrieveRecordsBasedOnRatingAndProductId(List<ProductReview> products)
+        {
+            AddingProductReview(products);
+            Console.WriteLine("\n-----------Retrieve Records Based On Rating and Product Id-----------");
+            var res = (from product in products where product.rating > 3 && (product.productId == 1 || product.productId == 4 || product.productId == 9) select product.productId).ToArray();
+            return res;
+        }
+        /// <summary>
         ///  UC4-->Retrived the count of productId
         /// </summary>
         /// <param name="products"></param>
@@ -86,5 +98,23 @@ namespace UC4_CountofproductID
             }
             return res;
         }
+        /// <summary>
+        /// UC5---->Retrieving the product id in list
+        /// </summary>
+        /// <param name="products"></param>
+        /// <returns></returns>
+        public static string RetrieveOnlyProductIdAndReviews(List<ProductReview> products)
+        {
+            string result = null;
+            AddingProductReview(products);
+            var res = products.Select(product => new { ProductId = product.productId, Review = product.review }).ToList();
+            foreach (var ele in res)
+            {
+                Console.WriteLine("ProductId " + ele.ProductId + " " + "Review " + " " + ele.Review);
+                result += ele.ProductId + " ";
+            }
+            return result;
+        }
     }
 }
+

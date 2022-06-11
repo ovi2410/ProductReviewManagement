@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC4_CountofproductID;
+using UC5_RetriveingproductIdandReview;
 
 namespace ProductReviewManagement
 {
@@ -25,9 +25,14 @@ namespace ProductReviewManagement
                 case 2:
                     ProductReviewManager.RetrieveTopThreeRating(productReviews);
                     break;
-
+                case 3:
+                    ProductReviewManager.RetrieveRecordsBasedOnRatingAndProductId(productReviews);
+                    break;
                 case 4:
                     ProductReviewManager.CountingProductId(productReviews);
+                    break;
+                case 5:
+                    ProductReviewManager.RetrieveOnlyProductIdAndReviews(productReviews);
                     break;
 
             }
