@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC5_RetriveingproductIdandReview;
+using Uc6_skiptop5records;
 
 namespace ProductReviewManagement
 {
@@ -34,6 +34,10 @@ namespace ProductReviewManagement
                 case 5:
                     ProductReviewManager.RetrieveOnlyProductIdAndReviews(productReviews);
                     break;
+                case 6:
+                    ProductReviewManager.SkipTopFiveRecords(productReviews);
+                    break;
+
 
             }
         }
