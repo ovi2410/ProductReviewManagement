@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC7_8_9_RetrievendIsLikeValueTrue;
+using UC10_AverageRating;
 
 namespace ProductReviewManagement
 {
@@ -43,6 +43,7 @@ namespace ProductReviewManagement
                     break;
                 case 8:
                     ProductReviewManager.CreateDataTable(productReviews);
+                    ProductReviewManager.AverageOfRating();
                     break;
 
 

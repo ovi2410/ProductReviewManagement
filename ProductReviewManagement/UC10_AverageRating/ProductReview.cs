@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC7_8_9_RetrievendIsLikeValueTrue
+namespace UC10_AverageRating
 {
     public class ProductReview
     {
