@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using Uc6_skiptop5records;
+using UC7_8_9_RetrievendIsLikeValueTrue;
 
 namespace ProductReviewManagement
 {
@@ -36,6 +36,13 @@ namespace ProductReviewManagement
                     break;
                 case 6:
                     ProductReviewManager.SkipTopFiveRecords(productReviews);
+                    break;
+                case 7:
+                    ProductReviewManager.AddingProductReview(productReviews);
+                    ProductReviewManager.CreateDataTable(productReviews);
+                    break;
+                case 8:
+                    ProductReviewManager.CreateDataTable(productReviews);
                     break;
 
 
