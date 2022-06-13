@@ -1,8 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-
-namespace Uc10_TestProject1
+namespace UC11_TestProject1
 {
     [TestClass]
     public class UnitTest1
@@ -92,6 +91,13 @@ namespace Uc10_TestProject1
             double actual = ProductReviewManager.AverageOfRating();
             Assert.AreEqual(expected, actual);
 
+        }
+        [TestMethod]
+        public void TestMethodForReturnsCountOfReviewMessageContainsGood()
+        {
+            int expected = 5;
+            int actual = ProductReviewManager.ReturnsReviewMessageContainsGood();
+            Assert.AreEqual(expected, actual);
         }
     }
 }

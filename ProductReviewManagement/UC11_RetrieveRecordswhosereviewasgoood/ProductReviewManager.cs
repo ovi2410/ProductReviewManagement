@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC10_AverageRating
+namespace UC11_RetrieveRecordswhosereviewasgoood
 {
     public class ProductReviewManager
     {
@@ -178,7 +179,7 @@ namespace UC10_AverageRating
             return count;
         }
         /// <summary>
-        /// Finding the average rating value
+        ///UC-10 Finding the average rating value
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
@@ -190,5 +191,20 @@ namespace UC10_AverageRating
             Console.WriteLine(result);
             return result;
         }
+        //UC-11
+        public static int ReturnsReviewMessageContainsGood()
+        {
+            List<ProductReview> products = new List<ProductReview>();
+            DataTable table = CreateDataTable(products);
+            int count = 0;
+            var res = from t in table.AsEnumerable() where t.Field<string>("review") == "Good" select t;
+            foreach (var p in res)
+            {
+                Console.WriteLine("{0} | {1} | {2} | {3} | {4} ", p["productId"], p["userId"], p["rating"], p["review"], p["isLike"]);
+                count++;
+            }
+            return count;
+        }
     }
 }
+

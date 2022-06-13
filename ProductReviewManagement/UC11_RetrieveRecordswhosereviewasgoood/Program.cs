@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using ProductReviewManagement;
-using UC10_AverageRating;
+using UC11_RetrieveRecordswhosereviewasgoood;
 
 namespace ProductReviewManagement
 {
@@ -42,8 +42,14 @@ namespace ProductReviewManagement
                     ProductReviewManager.CreateDataTable(productReviews);
                     break;
                 case 8:
-                    ProductReviewManager.CreateDataTable(productReviews);
+                    //DataTable dt = new DataTable();
+                    //ProductReviewManager.AverageOfRating(dt);
+                    //break;
+                    ProductReviewManager.ReturnsOnlyIsLikeFieldAsTrue();
                     ProductReviewManager.AverageOfRating();
+                    break;
+                case 9:
+                    ProductReviewManager.ReturnsReviewMessageContainsGood();
                     break;
 
 

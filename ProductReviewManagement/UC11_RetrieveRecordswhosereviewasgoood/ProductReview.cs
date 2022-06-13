@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UC10_AverageRating
+namespace UC11_RetrieveRecordswhosereviewasgoood
 {
     public class ProductReview
     {
